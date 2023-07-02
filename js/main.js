@@ -9,21 +9,22 @@ const modals = () => {
       target = document.querySelector(targetSelector);
 
     close.addEventListener('click', () => {
-     modal.style.display = "none";
+      modal.style.display = "none";
+      document.querySelector('body').style.overflow = "";
     })
 
     modal.addEventListener('click', (e) => {
       if (e.target === target) {
         modal.style.display = "none";
+        document.querySelector('body').style.overflow = "";
       }
-
     })
-
   }
 
   function showModalByTime(selector, time) {
     setTimeout(function () {
       document.querySelector(selector).style.display = "block";
+      document.querySelector('body').style.overflow = "hidden";
     }, time);
   }
 
