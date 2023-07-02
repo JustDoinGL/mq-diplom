@@ -1,28 +1,24 @@
 /*  Ссылки на шрифты */
 @font-face {
   font-family: "Open Sans";
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  src: url("/fonts/OpenSans-Regular.woff2"), url("/fonts/OpenSans-Regular.woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  src: url("/fonts/OpenSans-Bold.woff2"), url("/fonts/OpenSans-Bold.woff");
   font-weight: 700;
   font-style: normal;
 }
 
 /* Общие стили */
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
-  margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: "Open Sans";
-  color: #ffffff;
   margin: 0;
 }
 
@@ -35,23 +31,47 @@ h1 {
   color: #ffffff;
 }
 
+ul,
 h2,
 h3,
 h4,
-h5 {
-  text-transform: uppercase;
-}
-
+h5,
+h6,
+p,
+button,
+input,
 a {
+  color: inherit;
+  background-color: inherit;
   text-decoration: none;
+  outline: none;
+  border: none;
 }
 
-ul {
+li {
   list-style-type: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 /* Header */
 .header {
+  width: 100%;
   position: relative;
   background-color: #000000;
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
@@ -73,7 +93,7 @@ ul {
 }
 
 .header__top {
-  width: 1200px;
+  max-width: 1200px;
   padding: 15px;
 }
 
@@ -87,7 +107,7 @@ ul {
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  width: 1170px;
+  max-width: 1170px;
   padding: 30px 13px 0px 13px;
 }
 
@@ -113,7 +133,7 @@ ul {
 }
 
 .header__bottom {
-  width: 700px;
+  max-width: 700px;
   position: relative;
   z-index: 3;
   margin: 0 auto;
@@ -121,17 +141,175 @@ ul {
 }
 
 /* Main- News */
-
 .main {
   position: relative;
 }
 
 .container-main {
   display: flex;
-  width: 1200px;
+  flex-wrap: wrap;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 64px 15px 0;
 }
+
+/* Тренды */
+.main-top {
+  width: 100%;
+}
+
+.main-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 75px;
+  font-weight: bold;
+}
+
+.title {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f0d0e;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  max-width: 66px;
+  height: 3px;
+  background-color: #b59f5b;
+  margin: 15px auto 25px;
+}
+
+.trends {
+  margin-top: 65px;
+}
+
+.trends-body {
+  margin: 25px 0 0 0;
+}
+
+.trends-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2px;
+}
+
+.trends-column {
+  display: flex;
+  flex: 0 1 25%;
+  padding: 0 2px;
+}
+
+.trends-item {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.trends-item-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 2;
+  padding: 40% 20px 12px 20px;
+  border-top: 2px solid #a5a5a3;
+  border-bottom: 2px solid #a5a5a3;
+  background-color: #000000;
+}
+
+.item-wrap-1 {
+  background-image: url(../img/trend1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.item-wrap-2 {
+  background-image: url(../img/trend2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.item-wrap-3 {
+  background-image: url(../img/trend3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.item-wrap-4 {
+  background-image: url(../img/trend4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.item-wrap-1::after,
+.item-wrap-2::after,
+.item-wrap-3::after,
+.item-wrap-4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -3;
+}
+
+.trends-item-text {
+  border: 3px solid #7a6b40;
+  padding: 35px 10px 33px 30px;
+}
+
+.trends-item-tags {
+  display: flex;
+}
+
+.trends-tags-list {
+  margin: 0 0 0 20px;
+}
+
+.trends-tags-list:first-child {
+  margin: 0;
+}
+
+.trends-tags-link {
+  font-size: 14px;
+  font-weight: bold;
+  color: #b59f5b;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.trends-tags-link:hover {
+  text-decoration: underline;
+}
+
+.trends-item-title {
+  margin: 10px 0 0 0;
+}
+
+.trends-title-link {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: ease 0.3s;
+}
+
+.trends-title-link:hover {
+  color: #b59f5b;
+}
+
+/* Main left */
 
 .main__left {
   width: 780px;
@@ -146,6 +324,7 @@ ul {
 .news:first-child {
   margin-top: 0;
 }
+
 .news:last-child {
   margin-bottom: 65px;
 }
@@ -229,6 +408,7 @@ ul {
 .news__right-text p {
   padding-bottom: 15px;
 }
+
 .news__right-text p:last-child {
   padding-bottom: 0;
 }
@@ -352,6 +532,7 @@ ul {
   text-transform: uppercase;
   color: #ffffff;
 }
+
 .subscride-button:hover {
   background-color: #323232;
 }
@@ -425,6 +606,108 @@ ul {
   vertical-align: top;
 }
 
+/* Main bottom */
+.goods {
+  margin: 65px 0 0 0;
+}
+
+.goods-body {
+  margin: 25px 0 0 0;
+}
+
+.goods-row {
+  display: flex;
+  margin: 0 -35px 30px -35px;
+}
+
+.goods-column {
+  display: flex;
+  flex: 0 1 33.333%;
+  padding: 0 35px;
+}
+
+.goods-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 23px 0 23px;
+}
+
+.goods-item-img {
+  overflow: hidden;
+  text-align: center;
+}
+
+.goods-item-text {
+  color: #0f0d0e;
+  outline: 3px solid #d3c59d;
+  outline-offset: 20px;
+  margin: -10px 0 0 0;
+  padding: 29px 0px 16px 0px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  z-index: 1;
+}
+
+.goods-item-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.goods-item-text p {
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+.goods-text-link {
+  color: #b59f5b;
+  transition: ease 0.3s;
+}
+
+.goods-text-link:hover {
+  color: #7d661f;
+}
+
+.goods-item-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 21px 0 0 0;
+}
+
+.goods-price {
+  color: #0f0d0e;
+}
+
+.goods-subprice p {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: line-through;
+}
+
+.goods-mainprice p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.goods-btn {
+  padding: 15px 28px;
+  background-color: #b59f5b;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  transition: ease 0.3s;
+}
+
+.goods-btn:hover {
+  box-shadow: 0px -1px 0px 0px rgba(185, 178, 155, 1);
+  background-color: #323232;
+}
+
+
 /* Footer */
 .cointener {
   max-width: 1200px;
@@ -492,3 +775,5 @@ ul {
 .span-none {
   display: none;
 }
+
+
