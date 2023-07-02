@@ -313,7 +313,6 @@ body {
 	flex: 1 0 272px;
 }
 
-.new-posts {}
 
 .aside-title {
 	display: block;
@@ -402,7 +401,7 @@ body {
 	height: 48px;
 }
 
-.search-form-button {}
+
 
 .search-button {
 	flex: 0 0 50px;
@@ -462,7 +461,6 @@ body {
 	margin: 54px 0 0 0;
 }
 
-.tags-body {}
 
 .tags-list {
 	display: flex;
@@ -493,9 +491,6 @@ body {
 	margin: 66px 0 0 0;
 }
 
-.themes-body {}
-
-.themes-list {}
 
 .themes-item {
 	margin: 11px 0 0 0;
