@@ -775,20 +775,12 @@ body {
 	background-size: 24px 24px;
 }
 
-.social-twitter {
-	background-image: url(../svg/004-twitter.svg);
+.social-dribbble {
+	background-image: url(../svg/001-dribbble.svg);
 }
 
 .social-pinterest {
-	background-image: url(../svg/001-pinterest.svg);
-}
-
-.social-facebook {
-	background-image: url(../svg/002-facebook-logo.svg);
-}
-
-.social-inst {
-	background-image: url(../svg/005-instagram.svg);
+	background-image: url(../svg/002-pinterest.svg);
 }
 
 .social-tumblr {
@@ -855,6 +847,7 @@ body {
 	right: 0;
 	height: 20px;
 	width: 20px;
+  cursor: pointer;
 	background-image: url(../svg/form-x.svg);
 	background-repeat: no-repeat;
 }
@@ -986,6 +979,7 @@ body {
 
 .header-burger {
 	display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
