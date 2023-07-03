@@ -41,12 +41,15 @@ const modals = () => {
             }
         })
 
-        target.forEach(e => {
-            e.addEventListener('click', () => {
-                nav.style.display = "none";
-            })
+        if (window.getComputedStyle(burger).display === "block") {
+            target.forEach(e => {
+                e.addEventListener('click', () => {
+                    nav.style.display = "none";
+                })
+            }
+            )
         }
-        )
+
     }
 
     popupModal('.popup', '.popup-close', '.popup-body');
