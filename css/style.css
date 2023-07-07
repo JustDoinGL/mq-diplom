@@ -46,9 +46,11 @@ a,
 button {
 	cursor: pointer;
 }
+
 html {
 	font-size: 62.5%;
 }
+
 html,
 body {
 	font-family: "Open Sans", sans-serif;
@@ -227,7 +229,7 @@ body {
 }
 
 .card-body-img {
-	max-width: 380px;
+	width: 380px;
 }
 
 .card-body-img img {
@@ -241,6 +243,7 @@ body {
 
 .card-body-tags {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .card-body-item {
@@ -603,6 +606,7 @@ body {
 
 .trends-item-tags {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .trends-tags-list {
@@ -628,6 +632,7 @@ body {
 .trends-item-title {
 	margin: 10px 0 0 0;
 }
+
 .trends-title-link {
 	font-size: 20px;
 	font-weight: bold;
@@ -635,6 +640,7 @@ body {
 	color: #ffffff;
 	transition: ease 0.3s;
 }
+
 .trends-title-link:hover {
 	color: #b59f5b;
 }
@@ -665,6 +671,7 @@ body {
 }
 
 .goods-item-img {
+	height: 227px;
 	overflow: hidden;
 	text-align: center;
 }
@@ -805,6 +812,14 @@ body {
 	color: #126dba;
 }
 
+.footer-copy-p {
+	font-size: 12px;
+	line-height: 40px;
+	color: #999999;
+	font-weight: 700;
+	font-family: "Open Sans";
+}
+
 .popup {
 	display: none;
 	position: fixed;
@@ -838,7 +853,7 @@ body {
 	right: 0;
 	height: 20px;
 	width: 20px;
-  cursor: pointer;
+	cursor: pointer;
 	background-image: url(../svg/form-x.svg);
 	background-repeat: no-repeat;
 }
@@ -970,7 +985,7 @@ body {
 
 .header-burger {
 	display: none;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -1104,7 +1119,7 @@ body {
 		margin: 10px auto 17px auto;
 	}
 
-  @media (orientation: portrait) {
+	@media (orientation: portrait) {
 		.trends-row {
 			flex-wrap: wrap;
 			margin: -2px -2px;
@@ -1194,6 +1209,7 @@ body {
 
 	.card-body-img {
 		max-width: 100%;
+		width: 380px;
 	}
 
 	.card-body-date {
@@ -1213,7 +1229,7 @@ body {
 	}
 
 	.footer-social {
-		padding: 0;
+		padding: 30px 0;
 	}
 
 	.footer-copyright {
@@ -1344,19 +1360,7 @@ body {
 		margin: 13px 0 0 0;
 	}
 
-	@media (orientation: landscape) {
-		.trends-row {
-			flex-wrap: wrap;
-			margin: -1px -1px;
-		}
-
-		.trends-column {
-			flex: 1 1 50%;
-			padding: 1px 1px;
-		}
-	}
-
-	@media (orientation: portrait) {
+	@media (max-width: 640px) {
 		.trends-row {
 			flex-wrap: wrap;
 			margin: -2px -2px;
