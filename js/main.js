@@ -26,35 +26,11 @@ const modals = () => {
         }, time);
     }
 
-    function showNavBurger(burgerSelector, navSelector, targetSelector) {
-        const burger = document.querySelector(burgerSelector);
-        const nav = document.querySelector(navSelector);
-        const target = document.querySelectorAll(targetSelector)
 
-        burger.addEventListener('click', () => {
-            if (window.getComputedStyle(nav).display === "block") {
-                nav.style.display = "none";
-            } else {
-                nav.style.display = "block";
-            }
-        })
+    popupModal('.popup', '.popup__close', '.popup');
 
-        if (window.getComputedStyle(burger).display === "block") {
-            target.forEach(e => {
-                e.addEventListener('click', () => {
-                    nav.style.display = "none";
-                })
-            }
-            )
-        }
+    showModalByTime(".hidden", 3000);
 
-    }
-
-    popupModal('.popup', '.popup-close', '.popup-body');
-
-    showModalByTime(".popup", 3000);
-
-    showNavBurger('.header-burger', '.header-nav', ".header-link");
 }
 
 
