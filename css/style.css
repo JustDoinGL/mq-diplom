@@ -797,27 +797,16 @@ body {
 }
 
 .footer-copyright {
-	margin: 65px 0 40px 0;
 	text-align: center;
+	margin-top: 65px;
 }
 
 .footer-copy-link {
 	font-size: 12px;
 	font-weight: bold;
 	color: #999999;
-	transition: ease 0.3s;
-}
-
-.footer-copy-link:hover {
-	color: #126dba;
-}
-
-.footer-copy-p {
-	font-size: 12px;
-	line-height: 40px;
-	color: #999999;
-	font-weight: 700;
-	font-family: "Open Sans";
+	padding-bottom: 40px;
+	text-decoration: none;
 }
 
 .popup {
